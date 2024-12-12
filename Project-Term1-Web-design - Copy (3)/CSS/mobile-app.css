@@ -1,0 +1,313 @@
+@font-face {
+    font-family: 'Italianno'; /* Name your font family */
+    src: url('../FONT/Italianno-Regular.ttf'); /* Locate the .ttf file within your directory*/
+  }
+  @font-face {
+    font-family: 'Jacques Francois';
+    src: url(../FONT/JacquesFrancois-Regular.ttf);
+}
+@keyframes slideinleft {
+    from{
+        transform: translateX(-300px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+@keyframes slideIn {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+  .font-Italianno{
+    font-family: 'Italianno';
+    color: white;
+}
+h1 {
+    font-family: 'CustomFont', sans-serif; 
+}
+.main h1{
+    font-family: 'Jacques Francois';
+    font-weight: 500;
+}
+body {
+    background-color: black;
+    margin: 0px;
+    animation: slideinleft 0.3s ease-in;
+}
+.container {
+    background-image: url(../IMAGE/home.png);
+    background-position: 0 -50px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+    color: #FFFFFF;
+    display: grid;
+    grid-template-rows: auto auto auto;
+}
+.header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-bottom: 1px solid #FFFFFF;
+    backdrop-filter: brightness(40%);
+    z-index: 9;
+    animation: slideIn 0.6s ease-out;
+}
+.brand {
+    padding-left: 40px;
+    font-family: 'Italianno';
+    color: white;
+    font-weight: 500;
+}
+.box-menu {
+    margin: auto;
+}
+.logo-menu {
+    display: none;
+}
+.menu {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) auto;
+    grid-gap: 20px;
+}
+.menu a {
+    text-decoration: none;
+    color: #FFFFFF;
+    max-width: 50px;
+    padding: 10px 20px;
+    text-align: center;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.about-chose {
+    box-sizing: border-box;
+    width: 120px;
+    text-align: center;
+    padding: 10px 0px;
+    cursor: context-menu;
+    background: none;
+    margin: auto;
+}
+.about-content {
+    display: block;
+    position: absolute;
+    text-align: center;
+    border-radius: 8px;
+    z-index: 10;
+    transform: translateY(10px); /* Start slightly below */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Add animation for smooth fade and move */
+    opacity: 0;
+}
+
+.about-content a {
+    max-width: none;
+    padding: 10px 20px;
+    color: #FFFFFF;
+    background-color: #AE6439;
+    display: block;
+    border: 1px solid #FFFFFF;
+}
+.about:hover .about-content {
+    opacity: 1; /* Make it fully visible */
+    transform: translateY(0); /* Move it to its final position */
+}
+.about-content a:first-child {
+    border-radius: 8px 8px 0px 0px;
+}
+.about-content a:last-child {
+    border-radius: 0px 0px 8px 8px;
+}
+
+.about:hover .about-content {
+    display: block;
+}
+.about-content:hover {
+    display: block;
+}
+.chose {
+    border-bottom: 2px solid #FFFFFF;
+}
+.head-left {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat( 3,auto);
+    grid-gap: 20px;
+}
+.head-left a {
+    max-width: 20px;
+    padding: 10px;
+}
+.sign-in {
+    margin: auto;
+    margin-right: 40px;
+    padding: 10px 20px;
+    border-radius: 16px;
+    cursor: pointer;
+    background-color: #000000;
+    border: 2px solid #FFFFFF;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.button-link {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.main {
+    
+    text-align: center;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    padding: 20px;
+    grid-gap: 20px;
+    backdrop-filter: brightness(60%);
+}
+.main div{
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 0px 100px;
+}
+.main div img {
+    width: 300px;
+    margin: auto;
+}
+.image {
+    width: 100%;
+}
+.bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: 1px solid #FFFFFF;
+    padding: 20px;
+    backdrop-filter: brightness(40%);
+}
+
+.follow {
+    margin: auto;
+    display: grid;
+    grid-gap: 10px;
+}
+.follow div {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 5px;
+}
+.contact {
+    margin: auto;
+}
+.logo {
+    width: 20px;
+    margin: auto;
+}
+.sign-in:hover {
+    transform: scale(1.1); 
+    background-color: #9c4f2d; 
+}
+.menu a:hover {
+    transform: scale(1.2); 
+    color: white;
+}
+/* For desktops */
+@media (min-width: 1200px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+/* For tablets */
+@media (min-width: 768px) and (max-width: 1199px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+/* For smartphones */
+@media (max-width: 767px) {
+    .container {
+        background-position: 0;
+    }
+    .header {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-gap: 20px;
+        padding: 20px;
+    }
+    .header h1 {
+        grid-column: 1 / 3;
+        padding: 0px;
+        margin: auto;
+        font-size: 65px;
+        border-bottom: 1px solid #FFFFFF;
+    }
+    .box-menu {
+        margin-left: 0;
+    }
+    .menu {
+        display: none;
+    }
+    .logo-menu {
+        display: block;
+    }
+    .menu-slide {
+        display: none;
+    }
+    .menu-slide a {
+        text-align: center;
+        color: #FFFFFF;
+        padding: 20px;
+        text-decoration: none;
+    }
+    .logo-menu:hover .menu-slide {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .logo-menu:hover {
+        margin-top: 11px;
+    }
+    .head-left {
+        margin-top: 0;
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+    .sign-in {
+        margin-right: 0;
+    }
+    .main {
+        padding: 10px;
+    }
+    .main div {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+    .main h1 {
+        font-size: 28px;
+    }
+    
+    .head-main {
+        width: auto;
+        grid-gap: 0px;
+    }
+    .head-main p {
+        margin: auto;
+    }
+    .head-main p:last-child {
+        margin-left: 10px;
+    }
+    .main p {
+        font-size: 16px;
+    }
+    .main-content {
+        width: 100%;
+    }
+    .bottom {
+        font-size: 14px;
+    }
+    .follow div {
+        margin: auto;
+        margin-left: 0;
+    }
+}

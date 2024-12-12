@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Coffree</title>
+    <link rel="stylesheet" href="../CSS/our-story.css">
+    <script src="https://kit.fontawesome.com/46f8b634df.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="brand">The Coffree</h1>
+            <div class="box-menu">
+                <div class="menu">
+                    <a href="./home.html">Home</a>
+                    <a href="./menu.html">Menu</a>
+                    <a href="./location.html">Location</a>
+                    <div class="about">
+                        <p class="chose about-chose">Our Story</p>
+                        <div class="about-content">
+                            <a href="./our-story.html">Our Story</a>
+                            <a href="./mobile-app.html">Mobile App</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="logo-menu">
+                    <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path></svg>
+                    <div class="menu-slide">
+                        <a href="./home.html">Home</a>
+                        <a href="./menu.html">Menu</a>
+                        <a href="./location.html">Location</a>
+                        <a class="chose" href="./our-story.html">Our Story</a>
+                        <a href="./mobile-app.html">Mobile App</a>
+                    </div>
+                </div>
+            </div>
+            <div class="head-left">
+                <a href="./cart.html"><img class="logo" src="../IMAGE/logo/Shopping-cart.png"></a>
+                <a href="./profile.html"><img class="logo" src="../IMAGE/logo/User-Profile.png"></a>
+                <button class="sign-in"><a class="button-link" href="./profile.html">Sign In</a></button>
+            </div>
+        </div>
+        <div class="main">
+            <div class="above-main">
+                <div class="date">
+                    <h1>Open</h1>
+                    <br>
+                    <p style="font-family: Arial, Helvetica, sans-serif; font-size: larger;">Monday-Sunday</p>
+                    <p style="font-family: Arial, Helvetica, sans-serif; font-size: larger;">8 AM - 9 PM</p>
+                    <br>
+                    <p style="font-family: Arial, Helvetica, sans-serif;">Hope you enjoy !</p>
+                    <hr style="border-style: solid; width: 80px; border-color: rgb(158, 158, 158);">
+                </div>
+                <div>
+                    <h1 class="font-Italianno">Celebrating 49 years</h1>
+                    <p>Coffree was founded in 1975 by Bro Vat Bro Wond and Bro Chheav, Three visionary entrepreneurs who shared a passion for crafting the perfect coffee experience. While their shared dream brought them together in business, what many didn't know was that behind the grind and steam of their café, Bro Wond secretly harbored a deep and unspoken love for Bro Vat. Each cup of coffee they brewed seemed to carry whispers of emotions untold, the aroma mingling with the silent bond they shared—a love as warm and complex as their signature roast.</p>
+                    <h1 class="font-Jacques-Francois">Since 1975</h1>
+                </div>
+                <div class="taste">
+                    <h1 class="font-Italianno">Find your taste</h1>
+                    <div class="taste-slider">
+                        <div class="slider">
+                            <img class="image1" src="../IMAGE/product/image-4.png" alt="Image 1">
+                            <img class="image2" src="../IMAGE/product/image-5.png" alt="Image 2">
+                            <img class="image3" src="../IMAGE/product/image-6.png" alt="Image 3">
+                        </div>
+                        </div>
+                            <button class="prev" onclick="moveSlide(-1)"><i class="fa-solid fa-arrow-left"></i></button>
+                            <button class="next" onclick="moveSlide(1)"><i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+            
+                <script>
+                    let currentSlide = 0;
+            
+                    function moveSlide(direction) {
+                        const slider = document.querySelector(".slider");
+                        const totalSlides = slider.children.length;
+                        currentSlide += direction;
+                        if (currentSlide < 0) {
+                            currentSlide = totalSlides - 1;
+                        } else if (currentSlide >= totalSlides) {
+                            currentSlide = 0;
+                        }
+                        slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+                    }
+                </script>
+            </div>
+            <div class="below-main">
+                <div>
+                    <h1 class="font-Italianno">Original Taste </h1>
+                    <div id="origin">
+                        <div><img class="image" src="../IMAGE/product/image-2.png" height="300"></div>
+                        <p>“Coffree's Original Cold Brew™ Iced Coffee is crafted daily using a unique cold-drip process that preserves the rich flavor and bold strength of the beans while delivering a coffee that's two-thirds”</p>
+                    </div>
+                </div>
+                <div>
+                    <img class="image" src="../IMAGE/product/image-10.png">
+                    <h1 class="font-Italianno">Fresh Daily</h1>
+                    <h1>Coffree</h1>
+                </div>
+                <div>
+                    <h1 class="font-Italianno">Customer Favorite</h1>
+                    <div class="favorite">
+                        <img class="image" src="../IMAGE/product/image-5.png" height="300">
+                        <p>Coffree's Iced pumpkin latte is a crowd favorite, combining our rich, smooth cold brew with the subtle sweetness of natural vanilla and a splash of creamy milk. It's the ideal balance of bold coffee flavor and indulgent smoothness, crafted to brighten your day with every sip.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="follow">Follow
+                <div>
+                    <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M14 19H19V5H5V19H12V14H10V12H12V10.3458C12 9.00855 12.1392 8.52362 12.4007 8.03473C12.6622 7.54584 13.0458 7.16216 13.5347 6.9007C13.9174 6.69604 14.3922 6.57252 15.2217 6.51954C15.551 6.49851 15.9771 6.52533 16.5 6.6V8.5H16C15.0827 8.5 14.7042 8.54332 14.4779 8.66433C14.3376 8.73939 14.2394 8.83758 14.1643 8.97793C14.0433 9.20418 14 9.42853 14 10.3458V12H16.5L16 14H14V19ZM4 3H20C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3Z"></path></svg>
+                    <div>Facebook</div>
+                </div>
+                <div>
+                    <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.4883 14.651L15.25 21H22.25L14.3917 10.5223L20.9308 3H18.2808L13.1643 8.88578L8.75 3H1.75L9.26086 13.0145L2.31915 21H4.96917L10.4883 14.651ZM16.25 19L5.75 5H7.75L18.25 19H16.25Z"></path></svg>
+                    <div>X</div>
+                </div>
+            </div>
+            <div class="contact">Contact Us
+                <p>(+855) 12 222222</p>
+                <p>(+855) 16 816816</p>
+            </div>
+        </div> 
+    </div>
+</body>
+</html>
